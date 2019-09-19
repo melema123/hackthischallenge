@@ -2,12 +2,13 @@ from selenium import webdriver
 
 from selenium.webdriver.common.keys import Keys
 
-chromedriver="C:\Python37\drivers\chromedriver.exe"
+# Provide path to the browser driver. E.g C:\Python37\drivers\chromedriver.exe
+chromedriver="path\to\driver"
 driver=webdriver.Chrome(chromedriver)
 
 driver.get("https://www.hackthis.co.uk/")
-driver.find_element_by_name("username").send_keys("dydydyd")
-driver.find_element_by_name("password").send_keys("mnbvcxz")
+driver.find_element_by_name("username").send_keys("yourusername")
+driver.find_element_by_name("password").send_keys("yourpassword")
 driver.find_element_by_name("username").send_keys(Keys.ENTER)
 
 driver.get('https://www.hackthis.co.uk/levels/coding/1')
