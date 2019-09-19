@@ -1,3 +1,5 @@
+# This python + selenium solves "Coding Level 1" from HackThis website. 
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
