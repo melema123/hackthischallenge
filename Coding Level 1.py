@@ -3,7 +3,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-# Path to the chrome driver for selinium
+# Path to the chrome driver for selenium
 chromedriver="\path\to\driver"
 driver=webdriver.Chrome(chromedriver)
 
