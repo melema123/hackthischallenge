@@ -21,7 +21,7 @@ driver.get('https://www.hackthis.co.uk/levels/coding/2')
 question=driver.find_element_by_xpath("//textarea[1]").get_attribute('value').split(",")
 
 # Key in the decypted answer in the Textbox provided -> this is the part that is doing the decryption: chr(126 - (int(q)-32))
-driver.find_element_by_name("answer").send_keys([ " " if q == " " else chr(126 - ((int(q)-32))) for q in question ])
+driver.find_element_by_name("answer").send_keys([ " " if q == " " else chr(126 - ((int(q) - 32))) for q in question ])
 
 # Click Submit button
 driver.find_element_by_xpath("//input[@class='button']").click()
