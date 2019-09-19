@@ -23,5 +23,5 @@ question=driver.find_element_by_xpath("//textarea[1]").get_attribute('value').sp
 question.sort()
 
 # Submitting the answer
-driver.find_element_by_name("answer").send_keys([ q+", " if question.index(q) != (len(question)-1)  else q for q in question])
+driver.find_element_by_name("answer").send_keys([ q + ", " if question.index(q) != (len(question)-1)  else q for q in question ])
 driver.find_element_by_xpath("//input[@class='button']").click()
