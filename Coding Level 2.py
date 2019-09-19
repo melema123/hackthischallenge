@@ -20,7 +20,7 @@ driver.get('https://www.hackthis.co.uk/levels/coding/2')
 # Get the encrypted content to be decypted ( from the textbox )
 question=driver.find_element_by_xpath("//textarea[1]").get_attribute('value').split(",")
 
-# Key in the decypted answer in the Textbox provided -> this compressed list is the one decrypting [ " " if q == " " else chr(127 - ((int(q)-32) + 1)) for q in question]
+# Key in the decypted answer in the Textbox provided -> this is the part that is doing the decryption: chr(127 - ((int(q)-32) + 1))
 driver.find_element_by_name("answer").send_keys([ " " if q == " " else chr(127 - ((int(q)-32) + 1)) for q in question ])
 
 # Click Submit button
